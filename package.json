@@ -1,12 +1,14 @@
 {
   "name": "@lllllxt/debounce",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "防抖函数",
   "main": "debounce.min.js",
+  "typings": "types/index.d.ts",
   "scripts": {
-    "start": "npm run build && npm run uglify",
+    "start": "npm run declaration && npm run build && npm run uglify",
     "build": "rollup -c build/rollup.config.js -o debounce.js",
-    "uglify": "rollup -c build/rollup.config.js -o debounce.min.js --uglify"
+    "uglify": "rollup -c build/rollup.config.js -o debounce.min.js --uglify",
+    "declaration": "tsc"
   },
   "repository": {
     "type": "git",
@@ -24,10 +26,11 @@
     "@babel/preset-typescript": "^7.8.3",
     "rollup": "^1.32.1",
     "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-uglify": "^6.0.4"
+    "rollup-plugin-uglify": "^6.0.4",
+    "typescript": "^4.5.4"
   },
   "files": [
-    "types/",
+    "types",
     "debounce.js",
     "debounce.min.js"
   ]

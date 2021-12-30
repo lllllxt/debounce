@@ -8,7 +8,7 @@
  * @return {Function}
  */
 function debounce(fn: () => void, delay: number = 500, immediate: boolean = false) {
-  let timer = null;
+  let timer: any = null;
   let canExecute = true; // immediate = true时才有用
   return function () {
     // 保存函数调用时的上下文和参数，传递给 fn
