@@ -1,15 +1,23 @@
 {
   "name": "@lllllxt/debounce",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "防抖函数",
-  "main": "debounce.js",
+  "main": "debounce.min.js",
   "scripts": {
     "start": "npm run build && npm run uglify",
     "build": "rollup -c build/rollup.config.js -o debounce.js",
     "uglify": "rollup -c build/rollup.config.js -o debounce.min.js --uglify"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lllllxt/debounce.git"
+  },
+  "author": "lllllxt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lllllxt/debounce/issues"
+  },
+  "homepage": "https://github.com/lllllxt/debounce#readme",
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
